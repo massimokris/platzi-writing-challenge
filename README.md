@@ -11,9 +11,7 @@ LinkedIn es la red social de profesionales más utilizada en el mundo, donde pue
 La idea de LinkedIn es tener una red de contactos profesionales centralizada. Con la que a través de tus contactos puedes conectar con otros profesionales, con algo llamado grados de conexión. Este término puede sonar un poco raro, pero es bastante simple y es como funcionan las conexiones en la vida real.
 
 * **Conexiones de 1.er grado**: son personas que conoces y que ya pertenecen a tu red profesional.
-<br>
 * **Conexiones de 2.do grado**: personas con las que tienes una conexión en común. En el mundo real este sería el "amigo de tu amigo".
-<br>
 * **Conexiones de 3.er grado**: personas que no conoces y con las que no tienes ninguna conexión en común. Cualquier extraño que te puedes cruzar en la calle.
 
 Ahora que te conté esto quizás te preguntaras y si yo no tengo ningún conocido en la industria ¿Como empiezo a armar mi red de conexiones? Y aquí en donde entra  el desarrollo de **tu marca personal**.
