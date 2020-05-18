@@ -8,7 +8,7 @@ En este post hablaremos de LinkedIn, pero el concepto de marca personal aplica p
 
 LinkedIn es la red social de profesionales más utilizada en el mundo, donde puedes conectar con profesionales de todas las industrias.
 
-La idea de LinkedIn es tener una red de contactos profesionales centralizada. Con la que a través de tus contactos puedes conectar con otros profesionales, con algo llamado grados de conexión. Este término puede sonar un poco raro, pero es bastante simple y es como funcionan las conexiones en la vida real.
+La idea de LinkedIn es tener una red de contactos profesionales centralizada. Con la que a través de tus contactos puedes conectar con otros profesionales, con algo llamado grados de conexión. Este término puede sonar un poco extraño, pero es bastante simple y así es como funcionan las conexiones en la vida real.
 
 * **Conexiones de 1.er grado**: son personas que conoces y que ya pertenecen a tu red profesional.
 * **Conexiones de 2.do grado**: personas con las que tienes una conexión en común. En el mundo real este sería el "amigo de tu amigo".
