@@ -27,7 +27,9 @@ Una marca personal es la **primera impresión** que tienen de ti las personas qu
 **Comparte el proceso, no solo la meta**. Compartir tu trabajo es el pilar principal de tu marca personal. Para que los reclutadores se fijen en ti tienen que saber qué haces y a qué te dedicas o quieres dedicar.
 
 * **Comparte tu aprendizaje en los cursos al momento de mostrar tu diploma**. Cuenta que retos te encontraste en el curso, cómo los superaste y la enseñanza qué te dejó, de esta manera las personas podrán entender lo que significa ese diploma para ti y todo lo que aprendiste en el proceso de obtenerlo.
+
 <br>
+
 * **Muestra tus proyectos personales**. Todo lo que estás aprendiendo y los retos que estás superando en el proceso que estás llevando a cabo para desarrollarlo es importante y suma valor a tu marca personal. Pide feedback a tus contactos, ese feedback te ayudará a mejorar tus proyectos y seguir aprendiendo en el proceso.
 
 Sigue en redes sociales a **personas que admires** de la industria en la que quieres trabajar, mantente al tanto de lo que comparten. Esto te ayudará a orientarte e inspirarte para seguir aprendiendo y esforzándote para llegar a tu trabajo soñado.
