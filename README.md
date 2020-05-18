@@ -1,3 +1,4 @@
+![](https://i2.wp.com/softwareengineeringdaily.com/wp-content/uploads/2020/04/LinkedIn-Talent-Insights.jpg?resize=730%2C389&ssl=1)
 # Crece como profesional desarrollando tu Marca personal en LinkedIn
 
 Una marca personal es la diferencia entre las personas que frenan su desarrollo profesional y las que consiguen **el empleo que quieren**. Con tu presencia en redes sociales ya estás generando una marca personal. Esa es tu huella digital en el mundo y por la cual puedes llegar a miles o ¿Por qué no? A Cientos de miles de personas.
