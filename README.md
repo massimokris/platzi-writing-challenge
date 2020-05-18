@@ -14,7 +14,7 @@ La idea de LinkedIn es tener una red de contactos profesionales centralizada. Co
 * **Conexiones de 2.do grado**: personas con las que tienes una conexión en común. En el mundo real este sería el "amigo de tu amigo".
 * **Conexiones de 3.er grado**: personas que no conoces y con las que no tienes ninguna conexión en común. Cualquier extraño que te puedes cruzar en la calle.
 
-Ahora que te conté esto quizás te preguntaras y si yo no tengo ningún conocido en la industria ¿Como empiezo a armar mi red de conexiones? Y aquí en donde entra  el desarrollo de **tu marca personal**.
+Ahora que te conté esto quizás te preguntaras y si yo no tengo ningún conocido en la industria ¿Cómo empiezo a armar mi red de conexiones? Y aquí en donde entra  el desarrollo de **tu marca personal**.
 
 ## ¿Qué es una marca personal?
 
@@ -34,7 +34,7 @@ Una marca personal es la **primera impresión** que tienen de ti las personas qu
 
 Sigue en redes sociales a **personas que admires** de la industria en la que quieres trabajar, mantente al tanto de lo que comparten. Esto te ayudará a orientarte e inspirarte para seguir aprendiendo y esforzándote para llegar a tu trabajo soñado.
 
-**Conecta con las personas que admiras**. Yo como tu también tuve miedo de hacer conexiones con esas personas por temor a ser ignorado, pero no hay por qué, ellos también son personas como nosotros, como cualquier otra y la gran mayoría desde su posición está dispuesta a ayudar a los de más. Escríbeles para un consejo, para contarles en que estás trabajando o solo para darles un cumplido por qué son tu inspiración para seguir adelante.
+**Conecta con las personas que admiras**. Yo como tú también tuve miedo de hacer conexiones con esas personas por temor a ser ignorado, pero no hay por qué, ellos también son personas como nosotros, como cualquier otra y la gran mayoría desde su posición está dispuesta a ayudar a los de más. Escríbeles para un consejo, para contarles en que estás trabajando o solo para darles un cumplido por qué son tu inspiración para seguir adelante.
 
 ## Y ahora ¿Qué sigue?
 Esto es apenas un poco de todo lo que puedes aprender en el [Curso de Marca personal](https://platzi.com/cursos/marca-personal/ "Curso de Marca personal") con **Freddy Vega**. Es momento de ir al curso y aprender a crear perfiles impecables en Facebook, LinkedIn, Instagram y Twitter. Apoderarte de tu Github, Behance y Youtube para llevar tu carrera profesional al siguiente nivel.
