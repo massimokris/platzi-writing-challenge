@@ -18,7 +18,7 @@ Ahora que te conté esto quizás te preguntaras y si yo no tengo ningún conocid
 
 ## ¿Qué es una marca personal?
 
-Una marca personal es la **primera impresión** que tienen de ti las personas que no te conocen. Profesionalmente lo que quieres es mostrar la mejor versión de ti mismo, con una imagen auténtica qué muestre tus virtudes y aptitudes. Porque, al fin y al cabo, de nada sirve ser el mejor en tu trabajo si nadie te conoce.
+Es la **primera impresión** que tienen de ti las personas que no te conocen. Profesionalmente lo que quieres es mostrar la mejor versión de ti mismo, con una imagen auténtica qué muestre tus virtudes y aptitudes. Porque, al fin y al cabo, de nada sirve ser el mejor en tu trabajo si nadie te conoce.
 
 ## Consejos para desarrollar tu marca personal
 
@@ -34,7 +34,7 @@ Una marca personal es la **primera impresión** que tienen de ti las personas qu
 
 Sigue en redes sociales a **personas que admires** de la industria en la que quieres trabajar, mantente al tanto de lo que comparten. Esto te ayudará a orientarte e inspirarte para seguir aprendiendo y esforzándote para llegar a tu trabajo soñado.
 
-**Conecta con las personas que admiras**. Yo como tú también tuve miedo de hacer conexiones con esas personas por temor a ser ignorado, pero no hay por qué, ellos también son personas como nosotros, como cualquier otra y la gran mayoría desde su posición está dispuesta a ayudar a los de más. Escríbeles para un consejo, para contarles en que estás trabajando o solo para darles un cumplido por qué son tu inspiración para seguir adelante.
+**Conecta con las personas que admiras**. Yo como tú también tuve miedo de hacer conexiones con esas personas por temor a ser ignorado, pero no hay por qué, ellos también son personas como nosotros, como cualquier otra y la gran mayoría desde su posición está dispuesta a ayudar a los demás. Escríbeles para un consejo, para contarles en que estás trabajando o solo para darles un cumplido por qué son tu inspiración para seguir adelante.
 
 ## Y ahora ¿Qué sigue?
 Esto es apenas un poco de todo lo que puedes aprender en el [Curso de Marca personal](https://platzi.com/cursos/marca-personal/ "Curso de Marca personal") con **Freddy Vega**. Es momento de ir al curso y aprender a crear perfiles impecables en Facebook, LinkedIn, Instagram y Twitter. Apoderarte de tu Github, Behance y Youtube para llevar tu carrera profesional al siguiente nivel.
