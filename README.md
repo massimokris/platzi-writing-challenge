@@ -26,7 +26,7 @@ Es la **primera impresión** que tienen de ti las personas que no te conocen. Pr
 
 **Comparte el proceso, no solo la meta**: Compartir tu trabajo es el pilar principal de tu marca personal. Para que los reclutadores se fijen en ti, tienen que saber qué haces y a qué te dedicas o quieres dedicar.
 
-* **Comparte tu aprendizaje en los cursos al momento de mostrar tu diploma**. Cuenta qué retos te encontraste en el curso, cómo los superaste y la enseñanza que te dejó, de esta manera las personas podrán entender lo que significa ese diploma para ti y todo lo que aprendiste en el proceso de obtenerlo.
+* **Comparte tu aprendizaje en los cursos al momento de mostrar tu diploma**: Cuenta qué retos te encontraste en el curso, cómo los superaste y la enseñanza que te dejó, de esta manera las personas podrán entender lo que significa ese diploma para ti y todo lo que aprendiste en el proceso de obtenerlo.
 
 <br>
 
