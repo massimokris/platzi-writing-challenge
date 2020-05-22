@@ -61,9 +61,9 @@ En su base tiene la misma estructura que la sesión del lado del servidor, pero 
    + En cualquier punto de la aplicación verificamos la expiración del token. Si el token expira, cambiamos la bandera para indicar que no está "logueado".
    + Esto se suele chequear cuando la ruta cambia. Si el token expiró, redireccionamos a la ruta de "login" y actualizamos el estado como "logout".
 
-Entendiendo qué es un JSON Web Token, su anatomía y cómo utilizarlo en una sesión, tanto del lado del cliente como del servidor. Ahora te mostraré un ejemplo de implementación en NodeJS, Express y Mongoose.
+Entendiendo qué es un JSON Web Token, su anatomía y cómo utilizarlo en una sesión, tanto del lado del cliente como del servidor. Ahora te mostraré un ejemplo de **implementación de Autenticación en NodeJS, Express y Mongoose**.
 
-Lo primero que necesitamos es, crear un archivo con las variables de entorno que usaremos para la conexión a la base de datos y el secreto que nos servirá al momento de firmar el JWT.
+* Lo primero que necesitamos es, crear un archivo con las variables de entorno que usaremos para la conexión a la base de datos y el secreto que nos servirá al momento de firmar el JWT.
 ```
 // .env
 
@@ -81,7 +81,7 @@ DB_NAME=
 AUTH_JWT_SECRET
 ```
 
-Luego, para facilitar el manejo de las variables de entorno, creamos un archivo config. Éste paso es opcional, pero es una buena practica para mantener la modularidad en tu código.
+* Luego, para facilitar el manejo de las variables de entorno, creamos un archivo config. Éste paso es opcional, pero es una buena practica para mantener la modularidad en tu código.
 
 ```
 // config.js
@@ -102,7 +102,7 @@ const config = {
 module.exports = { config };
 ```
 
-Ahora, creamos dos archivos, para el manejo de usuarios. Uno para la conexión a la base de datos (en este caso yo utilice una base de datos Mongo, pero puedes utilizar la base de datos de tu preferencia) y otro para definir el modelo de schema del usuario.
+* Ahora, creamos dos archivos, para el manejo de usuarios. Uno para la conexión a la base de datos (en este caso yo utilice una base de datos Mongo, pero puedes utilizar la base de datos de tu preferencia) y otro para definir el modelo de schema del usuario.
 ```
 // mongo.js
 
@@ -153,7 +153,7 @@ userSchema.methods.validatePassword = async function(password) {
 module.exports = model('users', userSchema);
 ```
 
-Creamos un archivo con el enrutador para la autenticación de usuarios, con todas sus validaciones, el cual luego sera implementado al momento de exponer el servicio.
+* Creamos un archivo con el enrutador para la autenticación de usuarios, con todas sus validaciones, el cual luego sera implementado al momento de exponer el servicio.
 
 ```
 // auth.js
@@ -209,7 +209,7 @@ const authApi = (app) => {
 module.exports = authApi;
 ```
 
-Por último, y más importante, creamos el archivo index donde exponemos el servicio.
+* Por último, y no menos importante, creamos el archivo index donde exponemos el servicio.
 
 ```
 // index.js
