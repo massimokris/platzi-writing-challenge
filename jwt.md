@@ -2,7 +2,9 @@
 
 ¿Sabías qué autenticación y autorización son dos términos distintos?
 * **Autenticación** es el proceso en el cual verificamos la identidad de un usuario, es decir, comprobamos qué ese usuario existe y es válido.
+
 <br>
+
 * **Autorización** es la acción de otorgar permisos a los usuarios para interactuar en las distintas funcionalidades de nuestra aplicación.
 
 Ahora qué ya sabes esto, te invito a continuar leyendo este post, para qué aprendas cómo autenticar a tus usuarios con el estándar **JSON Web Token**.
@@ -43,7 +45,9 @@ token = unsignedToken + '.' + signature
 
 ## Autenticación tradicional vs JWT
 * Tradicional: Al abrir un navegador se crea una sesión con un ID de la misma, el cual es almacenado en las cookies y a partir de ese momento, en todos los request se envía la información almacenada.
+
 <br>
+
 * JWT: Al procesar la autenticación se firma un JWT, el cual genera un token que es enviado al cliente y este debe ser almacenado en memoria o en las cookies para ser utilizado en cada request.
 
 ## Sesiones en la web
