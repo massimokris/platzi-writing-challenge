@@ -61,4 +61,181 @@ En su base tiene la misma estructura que la sesión del lado del servidor, pero 
    + En cualquier punto de la aplicación verificamos la expiración del token. Si el token expira, cambiamos la bandera para indicar que no está "logueado".
    + Esto se suele chequear cuando la ruta cambia. Si el token expiró, redireccionamos a la ruta de "login" y actualizamos el estado como "logout".
 
-Entendiendo qué es un JSON Web Token, su anatomía y cómo utilizarlo en una sesión, tanto del lado del cliente como del servidor. Ahora te mostraré un ejemplo de implementación con JavaScript.
+Entendiendo qué es un JSON Web Token, su anatomía y cómo utilizarlo en una sesión, tanto del lado del cliente como del servidor. Ahora te mostraré un ejemplo de implementación en NodeJS, Express y Mongoose.
+
+Lo primero que necesitamos es, crear un archivo con las variables de entorno que usaremos para la conexión a la base de datos y el secreto que nos servirá al momento de firmar el JWT.
+```
+// .env
+
+// CONFIG
+PORT=
+NODE_ENV=
+
+// MONGO
+DB_USER=
+DB_PASSWORD=
+DB_HOST=
+DB_NAME=
+
+// AUTH
+AUTH_JWT_SECRET
+```
+
+Luego, para facilitar el manejo de las variables de entorno, creamos un archivo config. Éste paso es opcional, pero es una buena practica para mantener la modularidad en tu código.
+
+```
+// config.js
+
+// Requerimos la librería 'dotenv' para traer las variables de entorno.
+require("dotenv").config();
+
+const config = {
+  dev: process.env.NODE_ENV !== "production",
+  port: process.env.PORT || 8001,
+  dbUser: process.env.DB_USER,
+  dbPassword: process.env.DB_PASSWORD,
+  dbHost: process.env.DB_HOST,
+  dbName: process.env.DB_NAME,
+  authJwtSecret: process.env.AUTH_JWT_SECRET
+};
+
+module.exports = { config };
+```
+
+Ahora, creamos dos archivos, para el manejo de usuarios. Uno para la conexión a la base de datos (en este caso yo utilice una base de datos Mongo, pero puedes utilizar la base de datos de tu preferencia) y otro para definir el modelo de schema del usuario.
+```
+// mongo.js
+
+const mongoose = require("mongoose");
+// Importo el archivo config para utilizar las variables de entorno.
+const { config } = require('./config');
+
+// Asigno las variables de entorno codificadas para un mejor manejo al momento de hacer el stringConnection.
+const USER = encodeURIComponent(config.dbUser);
+const PASSWORD = encodeURIComponent(config.dbPassword);
+const DB_NAME = config.dbName;
+const DB_HOST = config.dbHost;
+
+// Asigno el stringConnection.
+const MONGO_URI = `mongodb+srv://${USER}:${PASSWORD}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`;
+
+// Establezco la conexión con la base de datos.
+mongoose
+  .connect(MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(db => console.log("Database is connected"))
+  .catch(err => console.log(err));
+ ```
+```
+// user.js
+
+const { Schema, model } = require('mongoose');
+
+// Schema del usuario con todos sus atributos.
+const userSchema = new Schema({
+    id: String,
+	avatar: String,
+	age: Number,
+	email: String,
+	name: String,
+	role: 'admin' | 'user',
+    surname: String,
+    password: String
+});
+
+// Función básica, con un condicional, para validar la contraseña.
+userSchema.methods.validatePassword = async function(password) {
+    return (password === this.password);
+}
+
+module.exports = model('users', userSchema);
+```
+
+Creamos un archivo con el enrutador para la autenticación de usuarios, con todas sus validaciones, el cual luego sera implementado al momento de exponer el servicio.
+
+```
+// auth.js
+
+const express = require("express");
+const jwt = require("jsonwebtoken");
+const { config } = require("./config");
+
+// Importamos el schema del usuario para utilizar sus funcionalidades.
+const User = require("./User");
+
+// El servicio recibirá una app de Express como parámetro.
+const authApi = (app) => {
+
+  // Instanciamos un enrutador de Express
+  const router = express.Router();
+
+  // Definimos la base del endpoint del servicio y que enrutador usara.
+  app.use("/api/v0", router);
+
+  // Definimos el endpoint que sera utilizado para autenticarse.
+  router.post("/authenticate", async (req, res) => {
+
+    // Extraemos el email y el password que viene en el body del request.
+    const { email, password } = req.body;
+
+    // Buscamos el usuario en la base de datos con el email recibido.
+    const user = await User.findOne({ email: email });
+
+    // Validamos que el usuario exista, caso contrario se envía un mensaje de 'usuario inexistente'.
+    if (!user) {
+      return res.status(404).send("The email doesn't exists");
+    }
+
+    // Verificamos el password del usuario.
+    const validated = await user.validatePassword(password);
+
+    // Validamos que el password sea correcta, caso contrario se envía un mensaje de 'usuario no autorizado'.
+    if (!validated) {
+      return res.status(401).json({ auth: false, token: null });
+    }
+
+    // Si todas las validaciones anteriores salieron bien, firmo el JWT con el ID del usuario, el secret de la aplicación y la cantidad de tiempo en segundos en la que expira el token.
+    const token = jwt.sign({ id: user._id }, config.authJwtSecret, {
+      expiresIn: 60 * 60 * 3
+    });
+
+    // Enviamos una respuesta de autenticación exitosa, acompañada del token.
+    res.status(200).json({ auth: true, token });
+  });
+}
+
+module.exports = authApi;
+```
+
+Por último, y más importante, creamos el archivo index donde exponemos el servicio.
+
+```
+// index.js
+
+const express = require("express");
+const cors = require("cors");
+const { config } = require("./config");
+const authApi = require("./auth");
+
+// Instancia de la conexión a la base de datos.
+require("./mongo");
+
+// Instancia un servidor de Express.
+const app = express();
+
+// Habilitamos el uso de JSON y CORS en todo el servicio.
+app.use(express.json());
+app.use(cors());
+
+// Agregamos el enrutador al servicio.
+authApi(app);
+
+// Exponemos el servicio en el puerto configurado
+app.listen(config.port, () => {
+  console.log(`Listening http://localhost:${config.port}`);
+});
+```
+
+Listo, con esos pasos ya tenemos una implementacion de autenticacion con JWT.
