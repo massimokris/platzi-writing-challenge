@@ -62,7 +62,7 @@ En su base tiene la misma estructura que la sesión del lado del servidor, pero 
 
 Entendiendo qué es un JSON Web Token, su anatomía y cómo utilizarlo en una sesión, tanto del lado del cliente como del servidor. Ahora te mostraré:
 
-## Implementación de Autenticación en NodeJS, Express y Mongoose.
+## Implementación de autenticación en NodeJS, Express y Mongoose.
 
 * Lo primero que necesitamos es, crear un archivo con las variables de entorno que usaremos para la conexión a la base de datos y el secreto que nos servirá al momento de firmar el JWT.
 ```
@@ -239,4 +239,4 @@ app.listen(config.port, () => {
 });
 ```
 
-Listo, con esos pasos ya tenemos una implementacion de autenticacion con JWT.
+Listo, con esos pasos ya tenemos una implementacion de autenticacion con JWT. Ahora, quiero invitarte a seguir creciendo en tu carrera profesional, tomando el [Curso de Autenticación con Passport.js](https://platzi.com/cursos/passport/), donde aprenderas a generar estrategias de autenticación Sign-In y Sign-Out usando Passport.js; Agregar autenticación con Facebook, Twitter y Google a tus desarrollos; y gestionar de manera sencilla los procesos de éxito y falla en la autenticación de tu aplicación.
