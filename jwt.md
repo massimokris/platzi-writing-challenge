@@ -32,7 +32,7 @@ Algunas propiedades estándar:
 * Tiempo de expiración `exp`, del JWT para verificar si está vencido y obligar al usuario a volver a autenticarse.
 * Creado `iat`, indica cuando fue creado el JWT.
 
-**Signature**: Es la firma del código JWT y está compuesta por el Header, más el Payload codificado. La firma del JWT se genera usando los campos anteriores, en base64 y una key secreta (que solo se sepa en los servidores que creen o usen el JWT) para usar un algoritmo de encriptación. La forma de hacerlo (usando pseudo código), sería la siguiente:
+**Signature**: Es la firma del código JWT y está compuesta por el Header, más el Payload codificado. La firma del JWT se genera usando los campos anteriores, en base64 y una key secreta (que solo se conozca en los servidores que creen o usen el JWT) para usar un algoritmo de encriptación. La forma de hacerlo (usando pseudo código), sería la siguiente:
 
 ```javascript
 key =  'secret'
@@ -239,6 +239,6 @@ app.listen(config.port, () => {
 });
 ```
 
-Listo, con esos pasos ya tenemos una implementacion de autenticacion con JWT. 
+Listo, con esos pasos ya tenemos una implementacion de autenticacion con JWT. Espero que te haya gustado el post y que te sea de utilidad para el desarrollo de tus aplicaciones.
 
-Ahora, quiero invitarte a seguir creciendo en tu carrera profesional, tomando el [Curso de Autenticación con Passport.js](https://platzi.com/cursos/passport/), donde aprenderas a generar estrategias de autenticación Sign-In y Sign-Out usando Passport.js; Agregar autenticación con Facebook, Twitter y Google a tus desarrollos; y gestionar de manera sencilla los procesos de éxito y falla en la autenticación de tu aplicación.
+Ahora, quiero invitarte a que sigas **creciendo en tu carrera profesional**, tomando el [Curso de Autenticación con Passport.js](https://platzi.com/cursos/passport/), donde aprenderas a generar estrategias de autenticación Sign-In y Sign-Out usando Passport.js; Agregar autenticación con Facebook, Twitter y Google a tus desarrollos; y gestionar de manera sencilla los procesos de falla y éxito en la autenticación de tus aplicaciónes.
