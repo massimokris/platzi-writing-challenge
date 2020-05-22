@@ -108,19 +108,19 @@ Ahora, creamos dos archivos, para el manejo de usuarios. Uno para la conexión a
 // mongo.js
 
 const mongoose = require("mongoose");
-// Importo el archivo config para utilizar las variables de entorno.
+// Importamos el archivo config para utilizar las variables de entorno.
 const { config } = require('./config');
 
-// Asigno las variables de entorno codificadas para un mejor manejo al momento de hacer el stringConnection.
+// Asignamos las variables de entorno codificadas para un mejor manejo al momento de hacer el stringConnection.
 const USER = encodeURIComponent(config.dbUser);
 const PASSWORD = encodeURIComponent(config.dbPassword);
 const DB_NAME = config.dbName;
 const DB_HOST = config.dbHost;
 
-// Asigno el stringConnection.
+// Asignamos el stringConnection.
 const MONGO_URI = `mongodb+srv://${USER}:${PASSWORD}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`;
 
-// Establezco la conexión con la base de datos.
+// Establecemos la conexión con la base de datos.
 mongoose
   .connect(MONGO_URI, {
     useNewUrlParser: true,
@@ -197,7 +197,8 @@ const authApi = (app) => {
       return res.status(401).json({ auth: false, token: null });
     }
 
-    // Si todas las validaciones anteriores salieron bien, firmo el JWT con el ID del usuario, el secret de la aplicación y la cantidad de tiempo en segundos en la que expira el token.
+    // Si todas las validaciones anteriores salieron bien, firmamos el JWT con el ID del usuario, 
+    // el secret de la aplicación y la cantidad de tiempo en segundos en la que expira el token.
     const token = jwt.sign({ id: user._id }, config.authJwtSecret, {
       expiresIn: 60 * 60 * 3
     });
