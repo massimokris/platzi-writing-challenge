@@ -59,8 +59,8 @@ Suele ser una pieza de información que se guarda en memoria, o en una base de d
 * ##### Sesión del lado del cliente
 En su base tiene la misma estructura que la sesión del lado del servidor, pero esta es "stateless", es decir que no maneja estado y se comporta de manera distinta:
 
-    * Cuando el usuario hace “login” agregamos una bandera con un token para indicar que está "logueado".
-    * En cualquier punto de la aplicación verificamos la expiración del token, si el token expira, cambiamos la bandera para indicar que no está "logueado".
-    * Esto se suele chequear cuando la ruta cambia. Si el token expiró, redireccionamos a la ruta de “login” y actualizamos el estado como “logout”.
+   + Cuando el usuario hace “login” agregamos una bandera con un token para indicar que está "logueado".
+   + En cualquier punto de la aplicación verificamos la expiración del token, si el token expira, cambiamos la bandera para indicar que no está "logueado".
+   + Esto se suele chequear cuando la ruta cambia. Si el token expiró, redireccionamos a la ruta de “login” y actualizamos el estado como “logout”.
 
 Entendiendo que es un JSON Web Token, su anatomía y como utilizarlo en una sesión tanto del lado del cliente como del servidor, te mostrare un ejemplo de implementación con JavaScript.
