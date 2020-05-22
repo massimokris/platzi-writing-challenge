@@ -51,17 +51,20 @@ token = unsignedToken + '.' + signature
 ## Sesiones en la web
 Una sesión es un intercambio de información semipermanente, también conocido como diálogo, entre dos o más dispositivos de comunicación. En términos generales, una sesión es una manera de preservar un estado deseado.
 
-* ##### Sesión del lado del servidor
+* **Sesión del lado del servidor**
 Suele ser una pieza de información, que se guarda en memoria, o en una base de datos. Permitiendo hacerle seguimiento a la información de autenticación, con el fin de identificar al usuario y determinar cuál es su estado. Mantener la sesión de esta manera en el lado del servidor es lo que se considera *"statefull"*, es decir, que maneja un estado.
 
-* ##### Sesión del lado del cliente
+* **Sesión del lado del cliente**
 En su base tiene la misma estructura que la sesión del lado del servidor, pero ésta es "stateless". Es decir, que no maneja estado y se comporta de manera distinta:
 
-   + Cuando el usuario hace "login" agregamos una bandera con un token, para indicar que está "logueado".
-   + En cualquier punto de la aplicación verificamos la expiración del token. Si el token expira, cambiamos la bandera para indicar que no está "logueado".
-   + Esto se suele chequear cuando la ruta cambia. Si el token expiró, redireccionamos a la ruta de "login" y actualizamos el estado como "logout".
+* hola
+    + Cuando el usuario hace "login" agregamos una bandera con un token, para indicar que está "logueado".
+    + En cualquier punto de la aplicación verificamos la expiración del token. Si el token expira, cambiamos la bandera para indicar que no está "logueado".
+    + Esto se suele chequear cuando la ruta cambia. Si el token expiró, redireccionamos a la ruta de "login" y actualizamos el estado como "logout".
 
-Entendiendo qué es un JSON Web Token, su anatomía y cómo utilizarlo en una sesión, tanto del lado del cliente como del servidor. Ahora te mostraré un ejemplo de **implementación de Autenticación en NodeJS, Express y Mongoose**.
+Entendiendo qué es un JSON Web Token, su anatomía y cómo utilizarlo en una sesión, tanto del lado del cliente como del servidor. Ahora te mostraré:
+
+## Implementación de Autenticación en NodeJS, Express y Mongoose.
 
 * Lo primero que necesitamos es, crear un archivo con las variables de entorno que usaremos para la conexión a la base de datos y el secreto que nos servirá al momento de firmar el JWT.
 ```
