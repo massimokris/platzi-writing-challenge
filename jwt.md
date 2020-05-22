@@ -64,7 +64,7 @@ Entendiendo qué es un JSON Web Token, su anatomía y cómo utilizarlo en una se
 
 ## Implementación de autenticación en NodeJS, Express y Mongoose.
 
-* Lo primero que necesitamos es, crear un archivo con las variables de entorno que usaremos para la conexión a la base de datos y el secreto que nos servirá al momento de firmar el JWT.
+Lo primero que necesitamos es, crear un archivo con las variables de entorno que usaremos para la conexión a la base de datos y el secreto que nos servirá al momento de firmar el JWT.
 ```javascript
 // .env
 
@@ -79,10 +79,10 @@ DB_HOST=
 DB_NAME=
 
 // AUTH
-AUTH_JWT_SECRET
+AUTH_JWT_SECRET=
 ```
 
-* Luego, para facilitar el manejo de las variables de entorno, creamos un archivo config. Éste paso es opcional, pero es una buena practica para mantener la modularidad en tu código.
+Luego, para facilitar el manejo de las variables de entorno, creamos un archivo config. Éste paso es opcional, pero es una buena practica para mantener la modularidad en tu código.
 
 ```javascript
 // config.js
@@ -103,7 +103,7 @@ const config = {
 module.exports = { config };
 ```
 
-* Ahora, creamos dos archivos, para el manejo de usuarios. Uno para la conexión a la base de datos (en este caso yo utilice una base de datos Mongo, pero puedes utilizar la base de datos de tu preferencia) y otro para definir el modelo de schema del usuario.
+Ahora, creamos dos archivos, para el manejo de usuarios. Uno para la conexión a la base de datos (en este caso yo utilice una base de datos Mongo, pero puedes utilizar la base de datos de tu preferencia) y otro para definir el modelo de schema del usuario.
 ```javascript
 // mongo.js
 
@@ -154,7 +154,7 @@ userSchema.methods.validatePassword = async function(password) {
 module.exports = model('users', userSchema);
 ```
 
-* Creamos un archivo con el enrutador para la autenticación de usuarios, con todas sus validaciones, el cual luego sera implementado al momento de exponer el servicio.
+Creamos un archivo con el enrutador para la autenticación de usuarios, con todas sus validaciones, el cual luego sera implementado al momento de exponer el servicio.
 
 ```javascript
 // auth.js
@@ -210,7 +210,7 @@ const authApi = (app) => {
 module.exports = authApi;
 ```
 
-* Por último, y no menos importante, creamos el archivo index donde exponemos el servicio.
+Por último, y no menos importante, creamos el archivo index donde exponemos el servicio.
 
 ```javascript
 // index.js
@@ -239,4 +239,6 @@ app.listen(config.port, () => {
 });
 ```
 
-Listo, con esos pasos ya tenemos una implementacion de autenticacion con JWT. Ahora, quiero invitarte a seguir creciendo en tu carrera profesional, tomando el [Curso de Autenticación con Passport.js](https://platzi.com/cursos/passport/), donde aprenderas a generar estrategias de autenticación Sign-In y Sign-Out usando Passport.js; Agregar autenticación con Facebook, Twitter y Google a tus desarrollos; y gestionar de manera sencilla los procesos de éxito y falla en la autenticación de tu aplicación.
+Listo, con esos pasos ya tenemos una implementacion de autenticacion con JWT. 
+
+Ahora, quiero invitarte a seguir creciendo en tu carrera profesional, tomando el [Curso de Autenticación con Passport.js](https://platzi.com/cursos/passport/), donde aprenderas a generar estrategias de autenticación Sign-In y Sign-Out usando Passport.js; Agregar autenticación con Facebook, Twitter y Google a tus desarrollos; y gestionar de manera sencilla los procesos de éxito y falla en la autenticación de tu aplicación.
