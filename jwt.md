@@ -13,14 +13,14 @@ A continuación hablaremos de qué es una sesión, sus distintos tipos y cómo p
 Es un estándar de internet que nos permite comunicarnos entre servicios web de una manera más segura. También, es un mecanismo de autenticación sin estado, lo que conocemos como "stateless". Éste tiene una anatomía que se compone de tres partes:
 
 **Header**: El cual consta de la propiedad `alg`, que indica el algoritmo usado en la firma y la propiedad `typ`, que define el tipo de token, en nuestro caso `JWT`.
-```
+```javascript
 {
   "alg": "HS256",
   "typ": "JWT"
 }
 ```
 **Payload**: Es donde guardamos toda la información de nuestros usuarios, aunque hay una serie de nombres de propiedades definidos en el estándar, podemos utilizar cualquier propiedad que nos sea de utilidad, por ejemplo:
-```
+```json
 {
   "id": "1",
   "username": "massimokris"
@@ -34,7 +34,7 @@ Algunas propiedades estándar:
 
 **Signature**: Es la firma del código JWT y está compuesta por el Header, más el Payload codificado. La firma del JWT se genera usando los campos anteriores, en base64 y una key secreta (que solo se sepa en los servidores que creen o usen el JWT) para usar un algoritmo de encriptación. La forma de hacerlo (usando pseudo código), sería la siguiente:
 
-```
+```javascript
 key =  'secret'
 unsignedToken = base64Encode(header) + '.' + base64Encode(payload)
 signature = SHA256(key, unsignedToken)
@@ -65,7 +65,7 @@ Entendiendo qué es un JSON Web Token, su anatomía y cómo utilizarlo en una se
 ## Implementación de autenticación en NodeJS, Express y Mongoose.
 
 * Lo primero que necesitamos es, crear un archivo con las variables de entorno que usaremos para la conexión a la base de datos y el secreto que nos servirá al momento de firmar el JWT.
-```
+```json
 // .env
 
 // CONFIG
@@ -84,7 +84,7 @@ AUTH_JWT_SECRET
 
 * Luego, para facilitar el manejo de las variables de entorno, creamos un archivo config. Éste paso es opcional, pero es una buena practica para mantener la modularidad en tu código.
 
-```
+```javascript
 // config.js
 
 // Requerimos la librería 'dotenv' para traer las variables de entorno.
