@@ -1,4 +1,4 @@
-# Aplica autenticación en tus aplicaciones con el estándar JSON Web Token
+# Implementa autenticación en tus aplicaciones con el estándar JSON Web Token
 
 ¿Sabías que, autenticación y autorización son dos términos distintos?
 * **Autenticación**: Es el proceso en el cual verificamos la identidad de un usuario. Es decir, comprobamos que ese usuario existe y es válido.
