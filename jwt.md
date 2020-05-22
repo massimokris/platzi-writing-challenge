@@ -56,8 +56,6 @@ Suele ser una pieza de información, que se guarda en memoria, o en una base de 
 
 * **Sesión del lado del cliente**
 En su base tiene la misma estructura que la sesión del lado del servidor, pero ésta es "stateless". Es decir, que no maneja estado y se comporta de manera distinta:
-
-* hola
     + Cuando el usuario hace "login" agregamos una bandera con un token, para indicar que está "logueado".
     + En cualquier punto de la aplicación verificamos la expiración del token. Si el token expira, cambiamos la bandera para indicar que no está "logueado".
     + Esto se suele chequear cuando la ruta cambia. Si el token expiró, redireccionamos a la ruta de "login" y actualizamos el estado como "logout".
