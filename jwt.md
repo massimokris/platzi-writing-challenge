@@ -9,7 +9,7 @@
 
 Ahora qué ya sabes esto, te invito a continuar leyendo este post, para qué aprendas cómo autenticar a tus usuarios con el estándar **JSON Web Token**.
 
-A continuación hablaremos de que es una sesión, sus distintos tipos y como podemos aplicar la autenticación para estas sesiones con JSON Web Token en aplicaciones web. Estos conceptos no están atados a un lenguaje de programación en especifico, sino que son aplicables en cualquiera de ellos.
+A continuación hablaremos de que es una sesión, sus distintos tipos y como podemos aplicar la autenticación para estas sesiones con JSON Web Token en aplicaciones web. Estos conceptos no están atados a un lenguaje de programación en específico, sino que son aplicables en cualquiera de ellos.
 
 ## JSON Web Token
 Es un estándar de internet qué nos permite comunicarnos entre servicios web de una manera más segura, también, es un mecanismo de autenticación sin estado, lo qué conocemos como ‘stateless’. Esté tiene una anatomía qué se compone de tres partes:
@@ -31,7 +31,7 @@ Es un estándar de internet qué nos permite comunicarnos entre servicios web de
 
 Algunas propiedades estándar:
 * Creador `iss` - Identifica a quien creo el JWT
-* Tiempo de expiración `exp` - del JWT para verificar si esta vencido y obligar al usuario a volver a autenticarse.
+* Tiempo de expiración `exp` - del JWT para verificar si está vencido y obligar al usuario a volver a autenticarse.
 * Creado `iat` - Indica cuando fue creado el JWT.
 
 **Signature**: Es la firma del código JWT y está compuesta por el Header más el Payload codificado. La firma del JWT se genera usando los campos anteriores en base64 y una key secreta (que solo se sepa en los servidores que creen o usen el JWT) para usar un algoritmo de encriptación. La forma de hacerlo sería la siguiente (usando pseudo código):
@@ -43,7 +43,7 @@ signature = SHA256(key, unsignedToken)
 token = unsignedToken + '.' + signature
 ```
 
-## Autenticación tradicional vs JWT
+## Autenticación tradicional vs. JWT
 * Tradicional: Al abrir un navegador se crea una sesión con un ID de la misma, el cual es almacenado en las cookies y a partir de ese momento, en todos los request se envía la información almacenada.
 
 <br>
@@ -63,4 +63,4 @@ En su base tiene la misma estructura que la sesión del lado del servidor, pero 
    + En cualquier punto de la aplicación verificamos la expiración del token, si el token expira, cambiamos la bandera para indicar que no está "logueado".
    + Esto se suele chequear cuando la ruta cambia. Si el token expiró, redireccionamos a la ruta de “login” y actualizamos el estado como “logout”.
 
-Entendiendo que es un JSON Web Token, su anatomía y como utilizarlo en una sesión tanto del lado del cliente como del servidor, te mostrare un ejemplo de implementación con JavaScript.
+Entendiendo que es un JSON Web Token, su anatomía y como utilizarlo en una sesión tanto del lado del cliente como del servidor, te mostraré un ejemplo de implementación con JavaScript.
