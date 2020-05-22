@@ -20,7 +20,7 @@ Es un estándar de internet que nos permite comunicarnos entre servicios web de 
 }
 ```
 **Payload**: Es donde guardamos toda la información de nuestros usuarios, aunque hay una serie de nombres de propiedades definidos en el estándar, podemos utilizar cualquier propiedad que nos sea de utilidad, por ejemplo:
-```json
+```javascript
 {
   "id": "1",
   "username": "massimokris"
@@ -65,7 +65,7 @@ Entendiendo qué es un JSON Web Token, su anatomía y cómo utilizarlo en una se
 ## Implementación de autenticación en NodeJS, Express y Mongoose.
 
 * Lo primero que necesitamos es, crear un archivo con las variables de entorno que usaremos para la conexión a la base de datos y el secreto que nos servirá al momento de firmar el JWT.
-```json
+```javascript
 // .env
 
 // CONFIG
@@ -104,7 +104,7 @@ module.exports = { config };
 ```
 
 * Ahora, creamos dos archivos, para el manejo de usuarios. Uno para la conexión a la base de datos (en este caso yo utilice una base de datos Mongo, pero puedes utilizar la base de datos de tu preferencia) y otro para definir el modelo de schema del usuario.
-```
+```javascript
 // mongo.js
 
 const mongoose = require("mongoose");
@@ -129,7 +129,7 @@ mongoose
   .then(db => console.log("Database is connected"))
   .catch(err => console.log(err));
  ```
-```
+```javascript
 // user.js
 
 const { Schema, model } = require('mongoose');
@@ -156,7 +156,7 @@ module.exports = model('users', userSchema);
 
 * Creamos un archivo con el enrutador para la autenticación de usuarios, con todas sus validaciones, el cual luego sera implementado al momento de exponer el servicio.
 
-```
+```javascript
 // auth.js
 
 const express = require("express");
@@ -212,7 +212,7 @@ module.exports = authApi;
 
 * Por último, y no menos importante, creamos el archivo index donde exponemos el servicio.
 
-```
+```javascript
 // index.js
 
 const express = require("express");
